@@ -34,6 +34,7 @@ namespace how_to_precache_an_xaf_winforms_application.Win
             }
             Tracing.Initialize();
             how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication winApplication = new how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication();
+            
             // Refer to the https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112680.aspx help article for more details on how to provide a custom splash form.
             //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
             if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)

@@ -24,7 +24,7 @@ namespace how_to_precache_an_xaf_winforms_application.Win {
             LinkNewObjectToParentImmediately = false;
             OptimizedControllersCreation = true;
             UseLightStyle = true;
-            this.EnableModelCache
+            EnableModelCache = true;
 			SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
 			ExecuteStartupLogicBeforeClosingLogonWindow = true;
         }
