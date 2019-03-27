@@ -35,24 +35,27 @@
             this.validationWindowsFormsModule = new DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
+            // validationModule
+            // 
+            this.validationModule.AllowValidationDetailsAccess = true;
+            this.validationModule.IgnoreWarningAndInformationRules = false;
+            // 
             // how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication
             // 
             this.ApplicationName = "how-to-precache-an-xaf-winforms-application";
-            this.CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
             this.Modules.Add(this.module1);
             this.Modules.Add(this.module2);
-            this.Modules.Add(this.module3);
-            this.Modules.Add(this.module4);
             this.Modules.Add(this.objectsModule);
             this.Modules.Add(this.conditionalAppearanceModule);
             this.Modules.Add(this.schedulerModuleBase);
-            this.Modules.Add(this.schedulerWindowsFormsModule);
             this.Modules.Add(this.validationModule);
+            this.Modules.Add(this.module3);
+            this.Modules.Add(this.schedulerWindowsFormsModule);
             this.Modules.Add(this.validationWindowsFormsModule);
+            this.Modules.Add(this.module4);
             this.UseOldTemplates = false;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication_DatabaseVersionMismatch);
             this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication_CustomizeLanguagesList);
-
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
