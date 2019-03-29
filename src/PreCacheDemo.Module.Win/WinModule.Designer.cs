@@ -1,5 +1,5 @@
-﻿namespace how_to_precache_an_xaf_winforms_application.Module.Win {
-    partial class how_to_precache_an_xaf_winforms_applicationWindowsFormsModule {
+﻿namespace PreCacheDemo.Module.Win {
+    partial class PreCacheDemoWindowsFormsModule {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             // 
-            // how_to_precache_an_xaf_winforms_applicationWindowsFormsModule
+            // PreCacheDemoWindowsFormsModule
             // 
-            this.RequiredModuleTypes.Add(typeof(how_to_precache_an_xaf_winforms_application.Module.how_to_precache_an_xaf_winforms_applicationModule));
+            this.RequiredModuleTypes.Add(typeof(PreCacheDemo.Module.PreCacheDemoModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Scheduler.Win.SchedulerWindowsFormsModule));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule));

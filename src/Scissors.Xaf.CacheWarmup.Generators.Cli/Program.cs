@@ -12,7 +12,7 @@ namespace Scissors.Xaf.CacheWarmup.Generators.Cli
         static void Main(string[] args)
         {
             var finder = new AttributeFinder();
-            var assemblyPath = @"C:\F\github\how-to-precache-an-xaf-winforms-application\src\how_to_precache_an_xaf_winforms_application.Win\bin\Debug\how_to_precache_an_xaf_winforms_application.Win.exe";
+            var assemblyPath = @"C:\F\github\how-to-precache-an-xaf-winforms-application\src\PreCacheDemo.Win\bin\Debug\PreCacheDemo.Win.exe";
             var foundType = finder.FindAttribute(assemblyPath);
 
             Console.WriteLine(foundType);

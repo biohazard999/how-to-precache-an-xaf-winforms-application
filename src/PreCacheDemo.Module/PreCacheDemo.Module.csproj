@@ -7,9 +7,9 @@
     <ProjectGuid>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>how_to_precache_an_xaf_winforms_application.Module</RootNamespace>
-    <AssemblyName>how_to_precache_an_xaf_winforms_application.Module</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>PreCacheDemo.Module</RootNamespace>
+    <AssemblyName>PreCacheDemo.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -106,7 +106,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\how_to_precache_an_xaf_winforms_applicationDbContext.cs" />
+    <Compile Include="BusinessObjects\PreCacheDemoDbContext.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>

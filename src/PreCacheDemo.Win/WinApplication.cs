@@ -7,15 +7,15 @@ using DevExpress.ExpressApp.Updating;
 using DevExpress.ExpressApp.Win.Utils;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.ExpressApp.EF;
-using how_to_precache_an_xaf_winforms_application.Module.BusinessObjects;
+using PreCacheDemo.Module.BusinessObjects;
 using System.Data.Common;
 using System.Configuration;
 
-namespace how_to_precache_an_xaf_winforms_application.Win {
+namespace PreCacheDemo.Win {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/DevExpressExpressAppWinWinApplicationMembersTopicAll.aspx
-    public partial class how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication : WinApplication {
+    public partial class PreCacheDemoWindowsFormsApplication : WinApplication {
         #region Default XAF configuration options (https://www.devexpress.com/kb=T501418)
-        static how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication() {
+        static PreCacheDemoWindowsFormsApplication() {
             DevExpress.Persistent.Base.PasswordCryptographer.EnableRfc2898 = true;
             DevExpress.Persistent.Base.PasswordCryptographer.SupportLegacySha512 = false;
 			DevExpress.ExpressApp.Utils.ImageLoader.Instance.UseSvgImages = true;
@@ -29,22 +29,22 @@ namespace how_to_precache_an_xaf_winforms_application.Win {
 			ExecuteStartupLogicBeforeClosingLogonWindow = true;
         }
         #endregion
-        public how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication() {
+        public PreCacheDemoWindowsFormsApplication() {
             InitializeComponent();
 			InitializeDefaults();
         }
         protected override void CreateDefaultObjectSpaceProvider(CreateCustomObjectSpaceProviderEventArgs args) {
 			args.ObjectSpaceProviders.Add(new XPObjectSpaceProvider(XPObjectSpaceProvider.GetDataStoreProvider(ConfigurationManager.ConnectionStrings["ConnectionStringXpo"].ConnectionString, null, true), false));
-			args.ObjectSpaceProviders.Add(new EFObjectSpaceProvider(typeof(how_to_precache_an_xaf_winforms_applicationDbContext), ConfigurationManager.ConnectionStrings["ConnectionStringEF"].ConnectionString));
+			args.ObjectSpaceProviders.Add(new EFObjectSpaceProvider(typeof(PreCacheDemoDbContext), ConfigurationManager.ConnectionStrings["ConnectionStringEF"].ConnectionString));
             args.ObjectSpaceProviders.Add(new NonPersistentObjectSpaceProvider(TypesInfo, null));
         }
-        private void how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication_CustomizeLanguagesList(object sender, CustomizeLanguagesListEventArgs e) {
+        private void PreCacheDemoWindowsFormsApplication_CustomizeLanguagesList(object sender, CustomizeLanguagesListEventArgs e) {
             string userLanguageName = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
             if(userLanguageName != "en-US" && e.Languages.IndexOf(userLanguageName) == -1) {
                 e.Languages.Add(userLanguageName);
             }
         }
-        private void how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication_DatabaseVersionMismatch(object sender, DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs e) {
+        private void PreCacheDemoWindowsFormsApplication_DatabaseVersionMismatch(object sender, DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs e) {
 #if EASYTEST
             e.Updater.Update();
             e.Handled = true;

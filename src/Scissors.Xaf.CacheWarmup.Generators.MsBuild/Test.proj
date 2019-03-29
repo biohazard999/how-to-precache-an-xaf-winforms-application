@@ -3,6 +3,6 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <UsingTask TaskName="Scissors.Xaf.CacheWarmup.Generators.MsBuild.XafCacheWarmupTask" AssemblyFile="Scissors.Xaf.CacheWarmup.Generators.MsBuild.dll" />
   <Target Name="Debug">
-    <XafCacheWarmupTask ApplicationPath="C:\F\github\how-to-precache-an-xaf-winforms-application\src\how_to_precache_an_xaf_winforms_application.Win\bin\Debug\how_to_precache_an_xaf_winforms_application.Win.exe"/>
+    <XafCacheWarmupTask ApplicationPath="C:\F\github\how-to-precache-an-xaf-winforms-application\src\PreCacheDemo.Win\bin\Debug\PreCacheDemo.Win.exe"/>
   </Target>
 </Project>
