@@ -1,4 +1,4 @@
-﻿namespace how_to_precache_an_xaf_winforms_application.Win {
+﻿namespace PreCacheDemo.Win {
     partial class XafSplashScreen
     {
         /// <summary>

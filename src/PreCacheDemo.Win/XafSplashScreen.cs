@@ -8,7 +8,7 @@ using DevExpress.Utils.Drawing;
 using DevExpress.Utils.Svg;
 using DevExpress.XtraSplashScreen;
 
-namespace how_to_precache_an_xaf_winforms_application.Win {
+namespace PreCacheDemo.Win {
     public partial class XafSplashScreen : SplashScreen {
         protected override void DrawContent(GraphicsCache graphicsCache, Skin skin) {
             Rectangle bounds = ClientRectangle;

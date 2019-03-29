@@ -13,11 +13,11 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 
-namespace how_to_precache_an_xaf_winforms_application.Module.Win {
+namespace PreCacheDemo.Module.Win {
     [ToolboxItemFilter("Xaf.Platform.Win")]
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
-    public sealed partial class how_to_precache_an_xaf_winforms_applicationWindowsFormsModule : ModuleBase {
-        public how_to_precache_an_xaf_winforms_applicationWindowsFormsModule() {
+    public sealed partial class PreCacheDemoWindowsFormsModule : ModuleBase {
+        public PreCacheDemoWindowsFormsModule() {
             InitializeComponent();
         }
         public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {

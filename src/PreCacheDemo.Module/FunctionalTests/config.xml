@@ -3,18 +3,18 @@
 	<Applications>
 		<!-- Win -->
 		<Application
-			Name="how_to_precache_an_xaf_winforms_application.Win"
-			FileName="[WinAppBin]\how_to_precache_an_xaf_winforms_application.Win.exe"
+			Name="PreCacheDemo.Win"
+			FileName="[WinAppBin]\PreCacheDemo.Win.exe"
 			AdapterAssemblyName="[WinAdapterAssemblyName]"
 			CommunicationPort="4100"/>
 	</Applications>
 	<TestDatabases>
-		<Database xsi:type="TestMSSQLDatabase" Server="(localdb)\mssqllocaldb" DBName="how_to_precache_an_xaf_winforms_applicationEasyTest"/>
+		<Database xsi:type="TestMSSQLDatabase" Server="(localdb)\mssqllocaldb" DBName="PreCacheDemoEasyTest"/>
 	</TestDatabases>
 
 	<Aliases>
 		<Alias Name="DomainUserName" Value="%USERDOMAIN%\%USERNAME%" />
 		<Alias Name="WinAdapterAssemblyName" Value="DevExpress.ExpressApp.EasyTest.WinAdapter.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-		<Alias Name="WinAppBin" Value="[ConfigPath]\..\..\how_to_precache_an_xaf_winforms_application.Win\Bin\EasyTest" />
+		<Alias Name="WinAppBin" Value="[ConfigPath]\..\..\PreCacheDemo.Win\Bin\EasyTest" />
 	</Aliases>
 </Options>

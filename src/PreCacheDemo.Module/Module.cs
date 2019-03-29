@@ -15,23 +15,23 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using System.Data.Entity;
-using how_to_precache_an_xaf_winforms_application.Module.BusinessObjects;
+using PreCacheDemo.Module.BusinessObjects;
 using DevExpress.ExpressApp.Xpo;
 
-namespace how_to_precache_an_xaf_winforms_application.Module {
+namespace PreCacheDemo.Module {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
-    public sealed partial class how_to_precache_an_xaf_winforms_applicationModule : ModuleBase {
-        static how_to_precache_an_xaf_winforms_applicationModule() {
+    public sealed partial class PreCacheDemoModule : ModuleBase {
+        static PreCacheDemoModule() {
             DevExpress.Data.Linq.CriteriaToEFExpressionConverter.SqlFunctionsType = typeof(System.Data.Entity.SqlServer.SqlFunctions);
 			DevExpress.Data.Linq.CriteriaToEFExpressionConverter.EntityFunctionsType = typeof(System.Data.Entity.DbFunctions);
 			DevExpress.ExpressApp.SystemModule.ResetViewSettingsController.DefaultAllowRecreateView = false;
             // Uncomment this code to delete and recreate the database each time the data model has changed.
             // Do not use this code in a production environment to avoid data loss.
             // #if DEBUG
-            // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<how_to_precache_an_xaf_winforms_applicationDbContext>());
+            // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PreCacheDemoDbContext>());
             // #endif 
         }
-        public how_to_precache_an_xaf_winforms_applicationModule() {
+        public PreCacheDemoModule() {
             InitializeComponent();
 			BaseObject.OidInitializationMode = OidInitializationMode.AfterConstruction;
         }

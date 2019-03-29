@@ -1,5 +1,5 @@
-﻿namespace how_to_precache_an_xaf_winforms_application.Module {
-	partial class how_to_precache_an_xaf_winforms_applicationModule {
+﻿namespace PreCacheDemo.Module {
+	partial class PreCacheDemoModule {
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>
@@ -24,7 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
 			// 
-			// how_to_precache_an_xaf_winforms_applicationModule
+			// PreCacheDemoModule
 			// 
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.BaseObject));
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.Event));

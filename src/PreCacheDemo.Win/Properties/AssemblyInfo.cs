@@ -1,4 +1,4 @@
-﻿using how_to_precache_an_xaf_winforms_application.Win;
+﻿using PreCacheDemo.Win;
 using Scissors.Xaf.CacheWarmup.Attributes;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -14,4 +14,4 @@ using System.Runtime.InteropServices;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-[assembly: XafCacheWarmup(typeof(how_to_precache_an_xaf_winforms_applicationWindowsFormsApplication))]
+[assembly: XafCacheWarmup(typeof(PreCacheDemoWindowsFormsApplication))]
