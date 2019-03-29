@@ -50,5 +50,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Attributes\Scissors.Xaf.CacheWarmup.Attributes.csproj">
+      <Project>{315dc3a4-2332-4e6f-93f5-a22376c6b96a}</Project>
+      <Name>Scissors.Xaf.CacheWarmup.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Generators\Scissors.Xaf.CacheWarmup.Generators.csproj">
+      <Project>{3df45f82-f10a-4d18-88b3-5ef32a91d631}</Project>
+      <Name>Scissors.Xaf.CacheWarmup.Generators</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

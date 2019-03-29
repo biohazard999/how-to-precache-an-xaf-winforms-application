@@ -2,6 +2,7 @@
 
 namespace Scissors.Xaf.CacheWarmup.Attributes
 {
+    [Serializable]
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
     public class XafCacheWarmupAttribute : Attribute
     {
