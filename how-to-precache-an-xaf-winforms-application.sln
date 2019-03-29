@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scissors.Xaf.CacheWarmup.Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scissors.Xaf.CacheWarmup.Generators.Cli", "src\Scissors.Xaf.CacheWarmup.Generators.Cli\Scissors.Xaf.CacheWarmup.Generators.Cli.csproj", "{15481A2D-D779-4D8D-B6C1-99405490C5C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scissors.Xaf.CacheWarmup.Generators.MsBuild", "src\Scissors.Xaf.CacheWarmup.Generators.MsBuild\Scissors.Xaf.CacheWarmup.Generators.MsBuild.csproj", "{9408D7A0-2DD9-494D-B230-F17CF19F67D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -136,6 +138,24 @@ Global
 		{15481A2D-D779-4D8D-B6C1-99405490C5C4}.Release|x64.Build.0 = Release|Any CPU
 		{15481A2D-D779-4D8D-B6C1-99405490C5C4}.Release|x86.ActiveCfg = Release|Any CPU
 		{15481A2D-D779-4D8D-B6C1-99405490C5C4}.Release|x86.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|x64.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|x64.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|x86.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.EasyTest|x86.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|x64.Build.0 = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{9408D7A0-2DD9-494D-B230-F17CF19F67D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

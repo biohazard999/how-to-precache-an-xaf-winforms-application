@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <AssemblyTitle>Scissors.Xaf.CacheWarmup.Generators.MsBuild</AssemblyTitle>
+    <Product>Scissors.Xaf.CacheWarmup.Generators.MsBuild</Product>
+    <Copyright>Copyright © Manuel Grundner 2019</Copyright>
+  </PropertyGroup>
+</Project>
