@@ -27,7 +27,7 @@ namespace Scissors.Xaf.CacheWarmup.Generators
                     var attribute = assembly.GetCustomAttributes(false).OfType<XafCacheWarmupAttribute>().FirstOrDefault();
                     if(attribute != null)
                     {
-                        return attribute.XafApplicationType.AssemblyQualifiedName;
+                        return attribute.XafApplicationType.FullName;
                     }
                     return null;
                 });
