@@ -47,8 +47,15 @@ Task("Version:Build").Does(() => UpdateVersionInfo(v => new Version(v.Major, v.M
 
 Task("Version:Rev").Does(() => UpdateVersionInfo(v => new Version(v.Major, v.Minor, v.Build, v.Revision + 1)));
 
+Task("Restore")
+    .Does(() =>
+{
+    NuGetRestore(info.Sln);   
+});
+
 Task("Build")
     .IsDependentOn("Version:Display")
+    .IsDependentOn("Restore")
     .Does(() =>
 {
     MSBuild(info.Sln);
