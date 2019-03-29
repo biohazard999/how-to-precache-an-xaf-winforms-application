@@ -5,4 +5,12 @@
     <Product>Scissors.Xaf.CacheWarmup.Generators.MsBuild</Product>
     <Copyright>Copyright © Manuel Grundner 2019</Copyright>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Test.proj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+  </ItemGroup>
 </Project>
