@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using Fasterflect;
+using static System.Console;
 
 namespace Scissors.Xaf.CacheWarmup.Generators
 {
@@ -30,30 +31,48 @@ namespace Scissors.Xaf.CacheWarmup.Generators
                 },
                 (args) =>
                 {
+                    WriteLine($"Try to find {args.XafApplicationTypeName} in {args.AssemblyPath}");
                     var assembly = AppDomain.CurrentDomain.GetAssemblies().First(b => b.Location == args.AssemblyPath);
                     var applicationType = assembly.GetType(args.XafApplicationTypeName);
-
+                    
                     if(applicationType != null)
                     {
+                        WriteLine($"Found {args.XafApplicationTypeName} in {args.AssemblyPath}");
+
+                        WriteLine($"Creating Application");
                         using (var xafApplication = (System.IDisposable)applicationType.CreateInstance())
                         {
+                            WriteLine($"Created Application");
+                            WriteLine($"Remove SplashScreen");
                             xafApplication.SetPropertyValue("SplashScreen", null);
+                            WriteLine($"Set DatabaseUpdateMode: 'Never'");
                             xafApplication.SetPropertyValue("DatabaseUpdateMode", 0);
 
+                            WriteLine($"Setting up application");
+                            WriteLine($"Starting cache warmup");
                             xafApplication.CallMethod("Setup");
+                            WriteLine($"Setup application done.");
+                            WriteLine($"Wormed up caches.");
 
                             var dcAssemblyFilePath = (string)xafApplication.CallMethod(GetDcAssemblyFilePath);
                             var modelAssemblyFilePath = (string)xafApplication.CallMethod(GetModelAssemblyFilePath);
                             var modelCacheFileLocationPath = (string)xafApplication.CallMethod(GetModelCacheFileLocationPath);
                             var modulesVersionInfoFilePath = (string)xafApplication.CallMethod(GetModulesVersionInfoFilePath);
 
-                            return new CacheWarmupGeneratorResponse
+                            var cacheResult = new CacheWarmupGeneratorResponse
                             {
                                 DcAssemblyFilePath = dcAssemblyFilePath,
                                 ModelAssemblyFilePath = modelAssemblyFilePath,
                                 ModelCacheFilePath = modelCacheFileLocationPath,
                                 ModulesVersionInfoFilePath = modulesVersionInfoFilePath
                             };
+
+                            WriteLine($"{nameof(cacheResult.DcAssemblyFilePath)}: {cacheResult.DcAssemblyFilePath}");
+                            WriteLine($"{nameof(cacheResult.ModelAssemblyFilePath)}: {cacheResult.ModelAssemblyFilePath}");
+                            WriteLine($"{nameof(cacheResult.ModelCacheFilePath)}: {cacheResult.ModelCacheFilePath}");
+                            WriteLine($"{nameof(cacheResult.ModulesVersionInfoFilePath)}: {cacheResult.ModulesVersionInfoFilePath}");
+
+                            return cacheResult;
                         }
                     }
                     

@@ -1,64 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15481A2D-D779-4D8D-B6C1-99405490C5C4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Scissors.Xaf.CacheWarmup.Generators.Cli</RootNamespace>
-    <AssemblyName>Scissors.Xaf.CacheWarmup.Generators.Cli</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net452</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <AssemblyTitle>Scissors.Xaf.CacheWarmup.Generators.Cli</AssemblyTitle>
+    <Product>Scissors.Xaf.CacheWarmup.Generators.Cli</Product>
+    <Copyright>Copyright © Manuel Grundner 2019</Copyright>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Attributes\Scissors.Xaf.CacheWarmup.Attributes.csproj" />
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Generators\Scissors.Xaf.CacheWarmup.Generators.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Attributes\Scissors.Xaf.CacheWarmup.Attributes.csproj">
-      <Project>{315dc3a4-2332-4e6f-93f5-a22376c6b96a}</Project>
-      <Name>Scissors.Xaf.CacheWarmup.Attributes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Generators\Scissors.Xaf.CacheWarmup.Generators.csproj">
-      <Project>{3df45f82-f10a-4d18-88b3-5ef32a91d631}</Project>
-      <Name>Scissors.Xaf.CacheWarmup.Generators</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

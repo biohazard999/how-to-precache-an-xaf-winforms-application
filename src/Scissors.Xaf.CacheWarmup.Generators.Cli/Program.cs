@@ -24,10 +24,7 @@ namespace Scissors.Xaf.CacheWarmup.Generators.Cli
                 var cacheResult = cacheGenerator.WarmupCache(assemblyPath, foundType);
                 if(cacheResult != null)
                 {
-                    Console.WriteLine($"{nameof(cacheResult.DcAssemblyFilePath)}: {cacheResult.DcAssemblyFilePath}");
-                    Console.WriteLine($"{nameof(cacheResult.ModelAssemblyFilePath)}: {cacheResult.ModelAssemblyFilePath}");
-                    Console.WriteLine($"{nameof(cacheResult.ModelCacheFilePath)}: {cacheResult.ModelCacheFilePath}");
-                    Console.WriteLine($"{nameof(cacheResult.ModulesVersionInfoFilePath)}: {cacheResult.ModulesVersionInfoFilePath}");
+                    
                 }
             }
 
