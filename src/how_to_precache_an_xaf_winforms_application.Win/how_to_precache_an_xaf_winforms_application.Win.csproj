@@ -252,6 +252,14 @@
       <Project>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</Project>
       <Name>how_to_precache_an_xaf_winforms_application.Module</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Attributes\Scissors.Xaf.CacheWarmup.Attributes.csproj">
+      <Project>{315dc3a4-2332-4e6f-93f5-a22376c6b96a}</Project>
+      <Name>Scissors.Xaf.CacheWarmup.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Generators.MsBuild\Scissors.Xaf.CacheWarmup.Generators.MsBuild.csproj">
+      <Project>{9408d7a0-2dd9-494d-b230-f17cf19f67d6}</Project>
+      <Name>Scissors.Xaf.CacheWarmup.Generators.MsBuild</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -280,7 +288,27 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
   -->
+  <PropertyGroup>
+    <XafPreCacheGenerator>$(OutputPath)Scissors.Xaf.CacheWarmup.Generators.MsBuild.dll</XafPreCacheGenerator>
+    <XafApplicationPath>$(MSBuildThisFileDirectory)$(OutputPath)$(AssemblyName).exe</XafApplicationPath>
+  </PropertyGroup>
+  <UsingTask TaskName="Scissors.Xaf.CacheWarmup.Generators.MsBuild.XafCacheWarmupTask" AssemblyFile="$(XafPreCacheGenerator)" />
+  <Target Name="AfterBuild">
+    <XafCacheWarmupTask ApplicationPath="$(XafApplicationPath)" />
+    <ItemGroup>
+     <Content Include="$(OutputPath)\Model.Cache.xafml">
+      <Link>Model.Cache.xafml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(OutputPath)\ModulesVersionInfo">
+      <Link>ModulesVersionInfo</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(OutputPath)\ModelAssembly.dll">
+      <Link>ModelAssembly.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    </ItemGroup>
+  </Target>
 </Project>

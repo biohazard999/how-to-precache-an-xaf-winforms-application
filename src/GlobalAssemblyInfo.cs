@@ -10,7 +10,7 @@ using System.Reflection;
 [assembly: AssemblyProduct("how-to-precache-an-xaf-winforms-application.Win")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0.0+5f01b2039b28b00f6be3f964c3dda155418a96d6+topic/restore-packages")]
+[assembly: AssemblyInformationalVersion("1.0.0.0+92da5a204d931da08890f9d0938b40627b7b91ed+topic/automate-caching2")]
 [assembly: AssemblyCopyright("Copyright Manuel Grundner © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyConfiguration("")]
