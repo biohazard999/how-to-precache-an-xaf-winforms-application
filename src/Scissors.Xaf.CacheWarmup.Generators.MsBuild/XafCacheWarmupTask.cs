@@ -1,4 +1,5 @@
-﻿using Microsoft.Build.Utilities;
+﻿using Microsoft.Build.Framework;
+using Microsoft.Build.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,15 @@ namespace Scissors.Xaf.CacheWarmup.Generators.MsBuild
 {
     public class XafCacheWarmupTask : Task
     {
+        [Required]
+        public string ApplicationPath { get; set; }
+
         public override bool Execute()
         {
+            Console.WriteLine($"ApplicationPath: {ApplicationPath}");
+
             var finder = new AttributeFinder();
-            var assemblyPath = @"C:\F\github\how-to-precache-an-xaf-winforms-application\src\how_to_precache_an_xaf_winforms_application.Win\bin\Debug\how_to_precache_an_xaf_winforms_application.Win.exe";
+            var assemblyPath = ApplicationPath;
             var foundType = finder.FindAttribute(assemblyPath);
 
             Console.WriteLine(foundType);
