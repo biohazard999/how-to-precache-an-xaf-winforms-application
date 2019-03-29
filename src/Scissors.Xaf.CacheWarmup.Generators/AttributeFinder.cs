@@ -16,7 +16,7 @@ namespace Scissors.Xaf.CacheWarmup.Generators
         {
             using (var context = AppDomainContext.Create(new AppDomainSetup
             {
-                ApplicationBase = AppDomain.CurrentDomain.BaseDirectory,
+                ApplicationBase = Path.GetDirectoryName(typeof(AttributeFinder).Assembly.Location),
                 PrivateBinPath = Path.GetDirectoryName(assemblyPath),
             }))
             {
