@@ -11,6 +11,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Scissors.Xaf.CacheWarmup.Generators\Scissors.Xaf.CacheWarmup.Generators.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
   </ItemGroup>
 </Project>
