@@ -295,20 +295,25 @@
   </PropertyGroup>
   <UsingTask TaskName="Scissors.Xaf.CacheWarmup.Generators.MsBuild.XafCacheWarmupTask" AssemblyFile="$(XafPreCacheGenerator)" />
   <Target Name="AfterBuild">
-    <XafCacheWarmupTask ApplicationPath="$(XafApplicationPath)" />
+    <XafCacheWarmupTask ApplicationPath="$(XafApplicationPath)">
+     <Output TaskParameter="DcAssembly" PropertyName="DcAssembly" />
+     <Output TaskParameter="ModelAssembly" PropertyName="ModelAssembly" />
+     <Output TaskParameter="ModelCache" PropertyName="ModelCache" />
+     <Output TaskParameter="ModulesVersionInfo" PropertyName="ModulesVersionInfo" />
+    </XafCacheWarmupTask>
     <ItemGroup>
-      <Content Include="$(OutputPath)\Model.Cache.xafml">
-        <Link>Model.Cache.xafml</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Content Include="$(DcAssembly)">
+        <DeploymentContent>true</DeploymentContent>
       </Content>
-      <Content Include="$(OutputPath)\ModulesVersionInfo">
-        <Link>ModulesVersionInfo</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Content Include="$(ModelAssembly)">
+        <DeploymentContent>true</DeploymentContent>
       </Content>
-      <Content Include="$(OutputPath)\ModelAssembly.dll">
-        <Link>ModelAssembly.dll</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Content Include="$(ModelCache)">
+        <DeploymentContent>true</DeploymentContent>
+      </Content>
+      <Content Include="$(ModulesVersionInfo)">
+        <DeploymentContent>true</DeploymentContent>
       </Content>
     </ItemGroup>
-  </Target>
+  </Target>  
 </Project>
