@@ -48,15 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\Model.Cache.xafml">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\Model.Cache.xafml">
       <Link>Model.Cache.xafml</Link>
     </Content>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\ModulesVersionInfo">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\ModulesVersionInfo">
       <Link>ModulesVersionInfo</Link>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\ModelAssembly.dll">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\ModelAssembly.dll">
       <Link>ModelAssembly.dll</Link>
     </Content>
   </ItemGroup>
