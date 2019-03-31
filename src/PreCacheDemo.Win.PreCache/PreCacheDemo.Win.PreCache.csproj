@@ -1,70 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68140DD9-8910-43C8-A1B3-C019E7EAD72D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PreCacheDemo.Win.PreCache</RootNamespace>
-    <AssemblyName>PreCacheDemo.Win.PreCache</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyTitle>PreCacheDemo.Win.PreCache</AssemblyTitle>
+    <Product>PreCacheDemo.Win.PreCache</Product>
+    <Copyright>Copyright © Manuel Grundner 2019</Copyright>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\Model.Cache.xafml">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\Model.Cache.xafml">
       <Link>Model.Cache.xafml</Link>
     </Content>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\ModulesVersionInfo">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\ModulesVersionInfo">
       <Link>ModulesVersionInfo</Link>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\PreCacheDemo.Win\bin\Debug\ModelAssembly.dll">
+    <Content Include="..\PreCacheDemo.Win\bin\$(Configuration)\ModelAssembly.dll">
       <Link>ModelAssembly.dll</Link>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PreCacheDemo.Win\PreCacheDemo.Win.csproj">
-      <Project>{d05d93df-312d-4d4e-b980-726871ec7833}</Project>
-      <Name>PreCacheDemo.Win</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\PreCacheDemo.Win\PreCacheDemo.Win.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
