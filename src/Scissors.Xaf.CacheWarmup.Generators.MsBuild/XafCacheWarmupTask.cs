@@ -1,9 +1,6 @@
 ﻿using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Scissors.Xaf.CacheWarmup.Generators.MsBuild
 {
@@ -11,6 +8,15 @@ namespace Scissors.Xaf.CacheWarmup.Generators.MsBuild
     {
         [Required]
         public string ApplicationPath { get; set; }
+
+        [Output]
+        public string DcAssembly { get; set; }
+        [Output]
+        public string ModelAssembly { get; set; }
+        [Output]
+        public string ModelCache { get; set; }
+        [Output]
+        public string ModulesVersionInfo { get; set; }
 
         public override bool Execute()
         {
@@ -29,6 +35,11 @@ namespace Scissors.Xaf.CacheWarmup.Generators.MsBuild
                 var cacheResult = cacheGenerator.WarmupCache(assemblyPath, foundType);
                 if (cacheResult != null)
                 {
+                    DcAssembly = cacheResult.DcAssemblyFilePath;
+                    ModelAssembly = cacheResult.ModelAssemblyFilePath;
+                    ModelCache = cacheResult.ModelCacheFilePath;
+                    ModulesVersionInfo = cacheResult.ModulesVersionInfoFilePath;
+
                     Console.WriteLine("Done");
                     return true;
                 }
